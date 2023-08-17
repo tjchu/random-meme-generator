@@ -92,3 +92,8 @@ body {
   line-height: normal;
   letter-spacing: -1.6px;
 }
+
+.meme-image {
+  max-width: 477px;
+  max-height: 300px;
+}
