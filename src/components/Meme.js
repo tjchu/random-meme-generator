@@ -2,28 +2,29 @@ import React from "react"
 import memesData from "../data/memesData.js"
 
 function Meme() {
-    /*     
-    constructor(props) {
-      super(props);
-      this.state = {
-        img_url: ""
-      };
-    } 
-    */
+    const [meme, setMeme] = React.useState({
+        topText: "",
+        bottomText: "",
+        imgURL: "https://i.imgflip.com/3si4.jpg",
+    })
 
-    function generateRandomMemeURL(max) {
-        const memesList = memesData.data.memes
-        const randomNum = Math.floor(Math.random() * max)
-        const url = memesList[randomNum].url
-        console.log(url)
-        return url
-    }
-
-    const defaultImgURL = "https://i.imgflip.com/3si4.jpg"
-    const [imgURL, setImgURL] = React.useState(defaultImgURL)
+    const memesArray = memesData.data.memes
 
     function handleClick() {
-        setImgURL(generateRandomMemeURL(100))
+        setMeme(
+            function(prevMeme) {
+                let newURL = prevMeme.imgURL
+                while (newURL === prevMeme.imgURL) {
+                    let randomNum = Math.floor(Math.random() * memesArray.length)
+                    newURL = memesArray[randomNum].url
+                }
+                return {
+                    topText: "",
+                    bottomText: "",
+                    imgURL: newURL,
+                }
+            }
+        )
     }
 
     return (
@@ -35,7 +36,7 @@ function Meme() {
             <button className="generate-button">
                 <div className="generate-button-text" onClick={handleClick}>Get a new meme image  🖼</div>
             </button>
-            <img className="meme-image" src={imgURL} alt="randomly generated meme"/>
+            <img className="meme-image" src={meme.imgURL} alt="randomly generated meme"/>
         </div>
     )
 }
