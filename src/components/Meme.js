@@ -51,7 +51,7 @@ function Meme() {
     }
 
     return (
-        <div className="App-hero">
+        <div className="Meme-container">
             <div className="inputs">
                 <input type="text" className="input-box" placeholder="Shut up" onChange={handleTopTextChange} />
                 <input type="text" className="input-box" placeholder="and take my money" onChange={handleBottomTextChange} />
