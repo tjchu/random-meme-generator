@@ -50,7 +50,7 @@ body {
   line-height: normal;
 }
 
-.Meme-container {
+.App-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +93,38 @@ body {
   letter-spacing: -1.6px;
 }
 
+.meme-container {
+  position: relative;
+}
+
 .meme-image {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 477px;
+  max-height: 300px;
+}
+
+.meme-topText {
+  position: absolute;
+  top: 0%;
+  right: 50%;
+  color: #FFFFFF;
+  font-family: Impact;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+.meme-bottomText {
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  color: #FFFFFF;
+  font-family: Impact;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
