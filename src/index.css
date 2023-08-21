@@ -94,6 +94,6 @@ body {
 }
 
 .meme-image {
-  max-width: 477px;
-  max-height: 300px;
+  max-width: 90%;
+  max-height: 90%;
 }
