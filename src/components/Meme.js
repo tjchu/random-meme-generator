@@ -12,13 +12,13 @@ function Meme() {
 
     function handleTextChange(event) {
         setMeme(
-            function(prevMeme){
-                return {
+            (prevMeme) => (
+                {
                     ...prevMeme,
                     [event.target.name]: event.target.value,
                 }
-            }
-        );
+            )
+        )
     }
 
     function handleClick() {
