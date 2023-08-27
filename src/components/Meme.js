@@ -40,8 +40,8 @@ function Meme() {
     return (
         <div className="App-container">
             <div className="inputs">
-                <input type="text" className="input-box" placeholder="Shut up" name="topText" onChange={handleTextChange} />
-                <input type="text" className="input-box" placeholder="and take my money" name="bottomText" onChange={handleTextChange} />
+                <input type="text" className="input-box" placeholder="Shut up" name="topText" value={meme.topText} onChange={handleTextChange} />
+                <input type="text" className="input-box" placeholder="and take my money" name="bottomText" value={meme.bottomText} onChange={handleTextChange} />
             </div>
             <button className="generate-button">
                 <div className="generate-button-text" onClick={handleClick}>Get a new meme image  🖼</div>
