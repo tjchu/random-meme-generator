@@ -10,29 +10,16 @@ function Meme() {
 
     const memesArray = memesData.data.memes
 
-    function handleTopTextChange(event) {
+    function handleTextChange(event) {
         setMeme(
             function(prevMeme){
                 return {
                     ...prevMeme,
-                    topText: event.target.value,
+                    [event.target.name]: event.target.value,
                 }
             }
         );
-        console.log('top text is:', event.target.value);
-      }
-
-      function handleBottomTextChange(event) {
-        setMeme(
-            function(prevMeme){
-                return {
-                    ...prevMeme,
-                    bottomText: event.target.value,
-                }
-            }
-        );
-        console.log('bottom text is:', event.target.value);
-      }
+    }
 
     function handleClick() {
         setMeme(
@@ -53,8 +40,8 @@ function Meme() {
     return (
         <div className="App-container">
             <div className="inputs">
-                <input type="text" className="input-box" placeholder="Shut up" onChange={handleTopTextChange} />
-                <input type="text" className="input-box" placeholder="and take my money" onChange={handleBottomTextChange} />
+                <input type="text" className="input-box" placeholder="Shut up" name="topText" onChange={handleTextChange} />
+                <input type="text" className="input-box" placeholder="and take my money" name="bottomText" onChange={handleTextChange} />
             </div>
             <button className="generate-button">
                 <div className="generate-button-text" onClick={handleClick}>Get a new meme image  🖼</div>
