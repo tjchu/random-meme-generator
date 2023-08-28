@@ -11,6 +11,9 @@ function Meme() {
     const memesArray = memesData.data.memes
 
     function handleTextChange(event) {
+        /*You can get event.target values like this
+        const {name, value, type, checked} = event.target
+        */
         setMeme(
             (prevMeme) => (
                 {
