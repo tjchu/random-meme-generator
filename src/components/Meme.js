@@ -63,9 +63,9 @@ function Meme() {
             <button className="generate-button">
                 <div className="generate-button-text" onClick={handleClick}>Get a new meme image  🖼</div>
             </button>
-            <div className="meme-container">
-                <h2 className="meme-topText">{meme.topText}</h2>
-                <h2 className="meme-bottomText">{meme.bottomText}</h2>
+            <div className="meme">
+                <h2 className="meme-text top">{meme.topText}</h2>
+                <h2 className="meme-text bottom">{meme.bottomText}</h2>
                 <img className="meme-image" src={meme.imgURL} alt="randomly generated meme"/>
             </div>
         </div>

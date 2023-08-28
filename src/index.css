@@ -93,19 +93,22 @@ body {
   letter-spacing: -1.6px;
 }
 
-.meme-container {
+.meme {
   position: relative;
 }
 
 .meme-image {
-  max-width: 477px;
+  max-width: 100%;
   max-height: 300px;
 }
 
-.meme-topText {
+.meme-text {
   position: absolute;
-  top: 0%;
-  right: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-transform: uppercase;
   color: #FFFFFF;
   font-family: Impact;
   font-size: 25px;
@@ -115,16 +118,10 @@ body {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.top {
+  top: 0;
+}
 
-.meme-bottomText {
-  position: absolute;
-  top: 80%;
-  right: 50%;
-  color: #FFFFFF;
-  font-family: Impact;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.bottom {
+  bottom: 0;
 }
