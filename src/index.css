@@ -22,23 +22,23 @@ body {
   padding-right: 37px;
 }
 
-.title-box {
+.Title-box {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.title-img {
+.Title-img {
   width: 31px;
   height: 26px;
 }
 
-.title {
+.Title {
   font-family: 'Karla', sans-serif;
   font-weight: bold;
 }
 
-.course {
+.Course {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   color: #FFF;
@@ -58,13 +58,13 @@ body {
   margin-top: 36px;
 }
 
-.inputs {
+.Inputs {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
-.input-box {
+.Input-box {
   width: 230px;
   height: 35px;
   border-radius: 5px;
@@ -72,7 +72,7 @@ body {
   padding-left: 11px;
 }
 
-.generate-button {
+.Generate-button {
   width: 477px;
   height: 40px;
   flex-shrink: 0;
@@ -82,7 +82,7 @@ body {
   cursor: pointer;
 }
 
-.generate-button-text {
+.Generate-button-text {
   color: #FFF;
   text-align: center;
   font-family: Karla;
@@ -93,16 +93,16 @@ body {
   letter-spacing: -1.6px;
 }
 
-.meme {
+.Meme {
   position: relative;
 }
 
-.meme-image {
+.Meme-image {
   max-width: 100%;
   max-height: 300px;
 }
 
-.meme-text {
+.Meme-text {
   position: absolute;
   text-align: center;
   left: 50%;

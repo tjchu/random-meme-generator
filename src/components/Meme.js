@@ -52,10 +52,10 @@ function Meme() {
 
     return (
         <div className="App-container">
-            <div className="inputs">
+            <div className="Inputs">
                 <input
                     type="text"
-                    className="input-box"
+                    className="Input-box"
                     placeholder="Shut up"
                     name="topText"
                     value={meme.topText}
@@ -63,20 +63,20 @@ function Meme() {
                 />
                 <input
                     type="text"
-                    className="input-box"
+                    className="Input-box"
                     placeholder="and take my money"
                     name="bottomText"
                     value={meme.bottomText}
                     onChange={handleTextChange}
                 />
             </div>
-            <button className="generate-button">
-                <div className="generate-button-text" onClick={handleClick}>Get a new meme image  🖼</div>
+            <button className="Generate-button">
+                <div className="Generate-button-text" onClick={handleClick}>Get a new meme image  🖼</div>
             </button>
-            <div className="meme">
-                <h2 className="meme-text top">{meme.topText}</h2>
-                <h2 className="meme-text bottom">{meme.bottomText}</h2>
-                <img className="meme-image" src={meme.imgURL} alt="randomly generated meme"/>
+            <div className="Meme">
+                <h2 className="Meme-text top">{meme.topText}</h2>
+                <h2 className="Meme-text bottom">{meme.bottomText}</h2>
+                <img className="Meme-image" src={meme.imgURL} alt="randomly generated meme"/>
             </div>
         </div>
     )
