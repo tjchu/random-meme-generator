@@ -1,5 +1,4 @@
 import React from "react"
-import memesData from "../data/memesData.js"
 
 function Meme() {
     const [meme, setMeme] = React.useState({
@@ -8,10 +7,20 @@ function Meme() {
         imgURL: "https://i.imgflip.com/3si4.jpg",
     })
 
-    const memesArray = memesData.data.memes
+    const [allMemes, setAllMemes] = React.useState([])
+
+    React.useEffect(
+        () => {
+            fetch("https://api.imgflip.com/get_memes")
+                .then(resp => resp.json())
+                .then(data => setAllMemes(data))
+        },
+        []
+    )
 
     function handleTextChange(event) {
-        /*You can get event.target values like this
+        /*
+        You can get event.target values like this
         const {name, value, type, checked} = event.target
         */
         setMeme(
@@ -25,6 +34,7 @@ function Meme() {
     }
 
     function handleClick() {
+        const memesArray = allMemes.data.memes
         setMeme(
             function(prevMeme) {
                 let newURL = prevMeme.imgURL
