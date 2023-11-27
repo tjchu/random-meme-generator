@@ -6,7 +6,7 @@ body {
 
 .App {
   width: 550px;
-  height: 550px;
+  height: 560px;
   background-color: #FFFFFF;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.15);
 }
@@ -72,9 +72,7 @@ body {
   padding-left: 11px;
 }
 
-.Generate-button {
-  width: 477px;
-  height: 40px;
+.button {
   flex-shrink: 0;
   border: none;
   border-radius: 5px;
@@ -82,7 +80,22 @@ body {
   cursor: pointer;
 }
 
-.Generate-button-text {
+/*figure out why hover doesn't work*/
+.button:hover {
+  background-color: blue;
+}
+
+.Generate-button {
+  width: 477px;
+  height: 40px;
+}
+
+.Reset-button {
+  width: 100px;
+  height: 30px;
+}
+
+.Button-text {
   color: #FFF;
   text-align: center;
   font-family: Karla;

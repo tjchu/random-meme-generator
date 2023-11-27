@@ -7,7 +7,7 @@ function Header() {
                 <img className="Title-img" src={troll_face_img} alt="troll face"/>
                 <h3 className="Title">Meme Generator</h3>
             </div>
-            <p className="Course">React Course - Project 3</p>
+            <p className="Course">Kill time by creating random memes!</p>
         </header>
     )
 }
